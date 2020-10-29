@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        <div class="cart-table-area section-padding-100">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div class="checkout_details_area mt-50 clearfix">
+
+                            <div class="cart-title">
+                                <h2>Cadastro </h2>
+                            </div>
+
+                            <form action="#" method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        {{form.username}}
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        {{form.password1}}
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        {{form.password2}}
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        {{form.email}}
+                                    </div>
+                                    <input type="submit" name="_save" class="btn amado-btn w-100" value="Cadastre-se">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Main Content Wrapper End ##### -->
+
+{% endblock %}
